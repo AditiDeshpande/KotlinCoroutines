@@ -1,0 +1,39 @@
+https://kotlinlang.org/docs/coroutines-guide.html
+
+async and await r not keywords in kotlin
+Kotlin's suspending function provides a safer and less error-prone
+abstraction for asynchronous operations than futures(Read about it)
+and promises(Read about it)
+high level coroutine enabled primitives launch , async
+
+Diff. ways to prevent our applications from blocking
+Whether we r developing
+Desktop app
+Mobile app
+Server-side applications
+foll r the ways we generally use
+
+Threading
+*Callbacks
+*Future , promises and others (R)
+The idea behind futures or promises (there are also other terms these
+can be referred to depending on language/platform), is that when
+we make a call, we're promised that at some point it will return
+with an object called a Promise, which can then be operated on.
+Future retunrs descrete element
+*Reactive extensions (R)
+RX returns a stream
+*Coroutines
+Kotlin's approach to work with asynchronous code is using coroutines
+which is the idea of suspendable computations, i.e the idea that
+a function can suspend its execution at some point nad resume later
+on
+It is platform independent. Whether we're targeting JVM,
+JavaScript or any other platform, the code we write is the same.
+Under the covers the compiler takes care of adapting it to each
+platform.
+
+
+
+
+
