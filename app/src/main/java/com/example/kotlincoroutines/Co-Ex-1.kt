@@ -8,13 +8,17 @@ fun main () = runBlocking { //this: CoroutineScope
     fun main() and the code with coroutines inside of runBlocking{..} curly braces.
      */
 launch {
+    printMessage()
+}
+    println("Hello") // main coroutine continues while a previous one is delayed
+ }
+
+private suspend fun printMessage() {
     // launch a new coroutine and continue
     delay(1000L) // non-blocking delay for 1 sec
     //default time unit is ms
     println("World") //Print after delay
 }
-    println("Hello") // main coroutine continues while a previous one is delayed
- }
 
 /*
 Hello gets printed and then after some delay World gets printed
