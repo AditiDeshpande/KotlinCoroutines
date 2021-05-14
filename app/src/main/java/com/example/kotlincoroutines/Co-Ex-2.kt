@@ -19,7 +19,7 @@ fun main() = runBlocking {
         println("World!")
     }
     println("Hello")
-    job.join()// Wait
+    job.join()// Wait until child coroutine completes
     println("Done")
 
 }
