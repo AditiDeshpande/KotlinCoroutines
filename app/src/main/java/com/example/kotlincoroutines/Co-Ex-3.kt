@@ -5,7 +5,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlin.concurrent.thread
 
-/*fun main() = runBlocking {
+fun main() = runBlocking {
     repeat(100_000){
         //Launch a lot of coroutines
         launch {
@@ -13,7 +13,7 @@ import kotlin.concurrent.thread
             print(".")
         }
     }
-}*/
+}
 /*
 Output
 It launches 100K coroutines and, after 5 seconds,
@@ -22,14 +22,14 @@ each coroutine prints a dot.
 
 //Now with Threads
 
-fun main() =
+/*fun main() =
     repeat(100_000){
         //Launch a lot of coroutines
         thread {
             Thread.sleep(5000L)
             print(".")
         }
-    }
+    }*/
 /*
 Exception in thread "main" java.lang.OutOfMemoryError: unable to create new native thread
 	at java.lang.Thread.start0(Native Method)
